@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+abstract class Shape{
+	double A,B;
+	Shape(double x, double y){
+		this.A=x;
+		this.B=y;
+	}
+	abstract void printarea();
+}
+class rectangle extends Shape{
+	public rectangle(double x, double y){
+		super(x,y);
+	}
+	void printarea(){
+		System.out.println("Area of the rectangle is:"+A*B);
+	}
+}
+class triangle extends Shape{
+	public triangle(double x, double y){
+		super(x,y);
+	}
+	void printarea(){
+		System.out.println("Area of the triangle is:"+0.5*A*B);
+	}
+}
+class circle extends Shape{
+	public circle(double x, double y){
+		super(x,y);
+	}
+	void printarea(){
+		System.out.println("Area of the circle is:"+3.14*A*A);
+	}
+}
+class demo{
+	public static void main(String[]args){
+		
+		rectangle r = new rectangle(9,5);
+		triangle t = new triangle(10,8);
+		circle c = new circle(10,10);
+		r.printarea();
+		t.printarea();
+		c.printarea();
+		
+	}
+}
+
